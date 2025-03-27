@@ -6,7 +6,7 @@ We want to clarify that these outages are temporary and services will be restore
 Bot Tok is an TikTok Up Bot (likes, shares, favorites and views)
 based in node.js, puppeteer and third-party providers (zefoy.com & freer.es).
 
-🚨 Find help in [Telegram](https://t.me/bottok_help)
+🚨 Find help in [Telegram](https://t.me/butpok_help)
 
 >**Attention:** BotTok <u>DOESN'T SEND FOLLOWERS</u>!!!
 >
@@ -79,8 +79,7 @@ based in node.js, puppeteer and third-party providers (zefoy.com & freer.es).
 ✅ Up Favorites (Zefoy & Freer)  
 ✅ Up Comments Hearts (Zefoy & Freer)  
 ❌ Up Hearts (Zefoy & Freer)  
-❌ Up Live Stream (Zefoy)  
-❌ Up Live Views (Freer)  
+❌ Up Live Stream (Zefoy)
 ✅ Auto Captcha Solver  
 ✅ Captcha in Terminal (Optional)  
 ✅ Auto Bypass Cloudflare (Windows & Linux)  
