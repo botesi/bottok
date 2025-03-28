@@ -73,7 +73,7 @@ based in node.js, puppeteer and third-party providers (zefoy.com & freer.es).
 
 >**Attention:** The features that are with ❌ are integrated in the bot <u>BUT ARE PRACTICALLY NEVER AVAILABLE IN THE PROVIDERS</u>!
 
-✅ Up Views (Zefoy & Freer)   
+✅ Up Follow (Zefoy & Freer)   
 ✅ Up Shares (Zefoy & Freer)  
 ✅ Up Favorites (Zefoy & Freer)  
 ✅ Up Comments Hearts (Zefoy & Freer)  
@@ -351,7 +351,7 @@ Options:
   -h, --help                Show help
   -v, --version             BotTok version
   -l, --video <link>        TikTok video URL to perform the task on
-  -t, --task <task>         Task to perform on the TikTok video (example: 'Up Views')
+  -t, --task <task>         Task to perform on the TikTok video (example: 'Up Follow')
   -q, --provider <prov>     Provider Zefoy or Freer (default: Zefoy)
   -c, --cookies <path>      File path to store session cookies (default: cookies.json)
   -u, --user-agent <ua>     User agent to be used (default: random user-agent)
@@ -367,16 +367,16 @@ Options:
   -m, --minimal             Hide ASCII art header
   -d, --detach              Output mode for background processes
   -x, --limit <int>         By the time the accumulation limit is reached
-  -z, --min-limit <int>     If it does not accumulate x amount in 60 minutes it stops
+  -z, --min-limit <int>     If it does not accumulate x amount in 20 minutes it stops
   -f, --max-time <int>      Sets a maximum time limit in hours before stops
   -a, --available-tasks     Returns the currently available tasks
   -g, --session-status      Returns the session status
   -i, --init-accums         Set a initial accumulation value (default: 0)
   -e, --verbose             Display detailed processing information in logs
   -R, --retry-timeout       Waiting trying again timeout in minutes (default: 1)
-  -H, --c-hearts-qty <int>  Set the number of hearts to send to the comment (25, 50 or 100)
-  -T, --c-text-filter <str> Filter comments by comment text
-  -U, --c-user-filter <str> Filter comments by comment author
+  -H, --c-hearts-qty <int>  Set the number of hearts to send to the comment (1000, 5000 or 10000)
+  -T, --c-text-filter <str> Filter Follow by Follow text
+  -U, --c-user-filter <str> Filter Follow by Follow author
 ```
 
 ## Advanced
@@ -385,14 +385,14 @@ Options:
 
 Set task with `-t` flag (`Up Views`, `Up Shares`, `Up Favorites`) and video url with `-l` flag. Zefoy is used by default as provider, if you want to use Freer as provider add the `-q 'Freer'` flag.
 ```bash
-node bottok.js -t 'Up Views' -l https://www.tiktok.com/@jfadev/video/7216697213693529349
+node bottok.js -t 'Up Follow' -l https://www.tiktok.com/@jfadev/video/7216697213693529349
 ```
 
 #### Limit Task Accumulations
 
 Set the limit accumulations value with `-x` flag. The bot will stop when this limit is reached.
 ```bash
-node bottok.js -t 'Up Views' -x 20000 -l https://www.tiktok.com/@jfadev/video/7216697213693529349
+node bottok.js -t 'Up Follow' -x 1000 -l https://www.tiktok.com/@jfadev/video/7216697213693529349
 ```
 
 
@@ -495,7 +495,7 @@ node bottok.js -o -e
 
 #### Set Minimum Accumulation Limit
 
-If you don't accumulate x views/favorites/shares in 60 minutes it stops.
+If you don't accumulate x follow/favorites/shares in 20 minutes it stops.
 
 ```bash
 node bottok.js -z 100
@@ -526,7 +526,7 @@ node bottok.js -R 5
 
 #### Set Comment Hearts quantity
 
-Set the number of hearts to send to the comment (25, 50 or 100).
+Set the number of hearts to send to the Follow (1000, 5000 or 10000).
 Only work with Zefoy.
 
 ```bash
@@ -536,7 +536,7 @@ node bottok.js -H 100
 
 #### Filter Comments by Text
 
-List only comments that contain this text.
+List only Follow that contain this text.
 
 ```bash
 node bottok.js -T 'hello' 
@@ -544,7 +544,7 @@ node bottok.js -T 'hello'
 
 #### Filter Comments by Author
 
-List only those comments where the author's name contains this text.
+List only those Follow where the author's name contains this text.
 
 ```bash
 node bottok.js -U 'jfadev'
@@ -560,7 +560,7 @@ node bottok.js -a
 
 Return example:
 ```txt
-Up Comments Hearts, Up Views, Up Shares, Up Favorites
+Up Comments Hearts, Up Follow, Up Shares, Up Favorites
 ```
 
 #### Get a Session Status
@@ -723,7 +723,7 @@ Limit 0 = unlimited
 ![](doc/9.png?raw=true)
 
 ```txt
-Up Views,10000,https://www.tiktok.com/@user/video/7218328781327584518,Zefoy
+Up Follow,1000,https://www.tiktok.com/@user/video/7218328781327584518,Zefoy
 Up Favorites,500,https://www.tiktok.com/@user/video/7218328781327584518,Zefoy
 Up Shares,1000,https://www.tiktok.com/@user/video/7218328781327584518,Zefoy
 Up Views,50000,https://www.tiktok.com/@user/video/7208664677738450181,Freer
